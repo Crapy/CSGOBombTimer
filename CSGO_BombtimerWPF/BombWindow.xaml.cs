@@ -32,7 +32,7 @@ namespace CSGO_BombtimerWPF
         public BombWindow()
         {
             t.Tick += new EventHandler(OnTimedEvent);
-            t.Interval = new TimeSpan(0, 0, 1);
+            t.Interval = new TimeSpan(0, 0, 0, 0, 1);
             Loaded += BombWindow_Load;
             InitializeComponent();
         }
@@ -104,6 +104,14 @@ namespace CSGO_BombtimerWPF
             if (bombTimer >= 0)
             {
                 Dispatcher.BeginInvoke(DispatcherPriority.Background, new Action(() => clocklabel.Content = bombTimer.ToString()));
+                if(bombTimer < 10)
+                {
+                    Dispatcher.BeginInvoke(DispatcherPriority.Background, new Action(() => clocklabel.Margin = new Thickness(17,7,0,0)));
+                }
+                else if(clocklabel.Margin == new Thickness(17,7,0,0))
+                {
+                    Dispatcher.BeginInvoke(DispatcherPriority.Background, new Action(() => clocklabel.Margin = new Thickness(9, 7, 0, 0)));
+                }
             }
             if (GetActiveWindowTitle() == "Counter-Strike: Global Offensive")
             {

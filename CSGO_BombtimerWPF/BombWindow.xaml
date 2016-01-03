@@ -8,6 +8,6 @@
         Title="BombWindow" Height="39" Width="85.5" ResizeMode="NoResize" ShowInTaskbar="False" Background="{x:Null}" AllowsTransparency="True" WindowStyle="None" Topmost="True" Opacity="0.91" Closed="Window_Closed">
     <Grid Margin="0,0,10,0">
         <Image x:Name="image" HorizontalAlignment="Left" Height="30" Margin="37,8,-4,0" VerticalAlignment="Top" Width="43" Source="Resources/c4.png" Stretch="None" RenderTransformOrigin="1.123,0.521" OpacityMask="Snow"/>
-        <Label x:Name="clocklabel" Content=".." HorizontalAlignment="Left" Margin="8,7,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial Black" FontWeight="Bold" RenderTransformOrigin="0.722,0.521" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+        <Label x:Name="clocklabel" Content=".." HorizontalAlignment="Left" Margin="9,7,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial Black" FontWeight="Bold" RenderTransformOrigin="0.722,0.521" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
     </Grid>
 </Window>
